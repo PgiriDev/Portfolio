@@ -36,11 +36,17 @@
                     animation: {
                         'spin-slow': 'spin 8s linear infinite',
                         'pulse-glow': 'pulse-glow 3s infinite',
+                        'menu-open': 'menuOpen 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards', /* Smoother, no bounce */
                     },
                     keyframes: {
                         'pulse-glow': {
                             '0%, 100%': { opacity: 0.5, transform: 'scale(1)' },
                             '50%': { opacity: 1, transform: 'scale(1.1)' },
+                        },
+                        /* Updated Menu Animation: Simple Slide Down (No Scaling/Heartbeat) */
+                        menuOpen: {
+                            '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -307,8 +313,8 @@
             </button>
         </div>
         
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-3 bg-[#0d0d10]/95 backdrop-blur-xl border border-white/10 rounded-3xl p-8 flex flex-col items-center gap-6 md:hidden shadow-2xl animate-pulse-glow">
+        <!-- Mobile Menu Dropdown (Updated with Glass Effect) -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-3 bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl p-8 flex flex-col items-center gap-6 md:hidden shadow-2xl animate-menu-open origin-top">
             <a href="#work" class="text-gray-300 hover:text-white text-xl font-medium transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Work</a>
             <a href="#about" class="text-gray-300 hover:text-white text-xl font-medium transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
             <a href="#contact" class="btn-glow px-8 py-3 text-sm font-bold rounded-full w-full text-center" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Let's Talk</a>
