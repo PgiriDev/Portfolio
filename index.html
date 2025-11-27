@@ -172,7 +172,6 @@
             z-index: 20;
         }
 
-        /* The sliding shine element */
         .huly-btn::before {
             content: '';
             position: absolute;
@@ -185,10 +184,8 @@
             z-index: -1;
         }
 
-        /* Button Hover State (Triggered when hovering card or button) */
         .huly-card-wrapper:hover .huly-btn {
             border-color: var(--glow-color);
-            /* Rich gradient using the card's specific color */
             background: linear-gradient(135deg, var(--glow-color) 0%, #ffffff 200%);
             color: black;
             font-weight: 700;
@@ -196,7 +193,6 @@
             transform: translateY(-2px);
         }
 
-        /* Trigger shine animation */
         .huly-card-wrapper:hover .huly-btn::before {
             left: 100%;
         }
@@ -212,7 +208,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- NAV BUTTON STYLES --- */
+        /* --- BUTTON STYLES --- */
         .btn-glow {
             position: relative;
             overflow: hidden;
@@ -220,6 +216,7 @@
             color: black;
             transition: all 0.3s ease;
         }
+        /* The sliding shine effect for Solid Buttons */
         .btn-glow::before {
             content: '';
             position: absolute;
@@ -238,15 +235,33 @@
             transform: translateY(-2px);
         }
 
+        /* Updated Glass Button with Shine */
         .btn-glass {
+            position: relative;
+            overflow: hidden;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             transition: all 0.3s ease;
         }
+        /* Subtle sliding shine for Glass Buttons */
+        .btn-glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            /* More transparent shine to keep it classy */
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        .btn-glass:hover::before {
+            left: 100%;
+        }
         .btn-glass:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
@@ -261,11 +276,11 @@
     <!-- NEW FLOATING NAVBAR - WIDENED -->
     <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[1400px] z-50 transition-all duration-300">
         <!-- Glass Pill Container -->
-        <div class="bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-8 py-3 flex justify-between items-center shadow-lg shadow-purple-500/5 hover:border-white/20 transition-all">
+        <div class="bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-6 md:px-8 py-3 flex justify-between items-center shadow-lg shadow-purple-500/5 hover:border-white/20 transition-all">
             
             <!-- Logo (Inverted to White) -->
             <a href="#" class="flex items-center">
-                <img src="img/lo.png" alt="Logo" class="h-10 w-auto filter invert brightness-0 hover:opacity-80 transition-opacity">
+                <img src="img/lo.png" alt="Logo" class="h-8 md:h-10 w-auto filter invert brightness-0 hover:opacity-80 transition-opacity">
             </a>
             
             <!-- Desktop Menu -->
@@ -280,23 +295,23 @@
                     <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a>
                 
-                <!-- Updated "Let's Talk" Button with .btn-glow effect -->
+                <!-- Navbar "Let's Talk" Button with .btn-glow effect -->
                 <a href="#contact" class="btn-glow px-8 py-3 text-sm font-bold rounded-full">
                     Let's Talk
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-white text-xl pr-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                <i class="fa-solid fa-bars"></i>
+            <!-- Mobile Menu Toggle (Redesigned) -->
+            <button class="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 backdrop-blur-md" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
             </button>
         </div>
         
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-3 bg-[#0d0d10] border border-white/10 rounded-3xl p-6 flex flex-col items-center gap-6 md:hidden shadow-2xl">
-            <a href="#work" class="text-gray-300 hover:text-white text-lg font-medium">Work</a>
-            <a href="#about" class="text-gray-300 hover:text-white text-lg font-medium">About</a>
-            <a href="#contact" class="text-gray-300 hover:text-white text-lg font-medium">Contact</a>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full mt-3 bg-[#0d0d10]/95 backdrop-blur-xl border border-white/10 rounded-3xl p-8 flex flex-col items-center gap-6 md:hidden shadow-2xl animate-pulse-glow">
+            <a href="#work" class="text-gray-300 hover:text-white text-xl font-medium transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Work</a>
+            <a href="#about" class="text-gray-300 hover:text-white text-xl font-medium transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <a href="#contact" class="btn-glow px-8 py-3 text-sm font-bold rounded-full w-full text-center" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Let's Talk</a>
         </div>
     </nav>
 
@@ -327,12 +342,14 @@
                 Hi, I'm <span class="text-white font-semibold">Prakash Giri</span>. A CSE 3rd Year Student transforming complex problems into beautiful, high-performance interfaces.
             </p>
 
-            <!-- UPDATED BUTTONS -->
+            <!-- HERO BUTTONS -->
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <!-- View Projects: Solid Glow -->
                 <a href="#work" class="btn-glow px-10 py-4 rounded-full font-bold text-lg flex items-center gap-3">
                     View Projects 
                     <i class="fa-solid fa-arrow-right-long"></i>
                 </a>
+                <!-- Contact Me: Glass Shine -->
                 <a href="#contact" class="btn-glass px-10 py-4 rounded-full font-medium text-lg flex items-center gap-3">
                     Contact Me
                     <i class="fa-regular fa-envelope"></i>
@@ -360,31 +377,31 @@
             <!-- HULY CARD GRID -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Card 1: Orange/Fire -->
-                <div class="huly-card-wrapper group cursor-pointer" style="--glow-color: #f97316;">
+                <!-- Card 1: FocusFlow (Updated) -->
+                <div class="huly-card-wrapper group cursor-pointer" style="--glow-color: #f97316;" onclick="window.open('https://focusflow.online', '_blank')">
                     <div class="huly-card-content p-8 flex flex-col h-full">
                         <div class="huly-glow-spot"></div>
                         
                         <div class="relative z-10 mb-6">
                             <span class="text-xs font-bold tracking-widest uppercase text-orange-400 mb-2 block">Full Stack App</span>
-                            <h3 class="text-3xl font-serif text-white mb-2">Huly.io Clone</h3>
-                            <p class="text-sm text-gray-400">A high-performance project management tool built for speed.</p>
+                            <h3 class="text-3xl font-serif text-white mb-2">FocusFlow</h3>
+                            <p class="text-sm text-gray-400">Plan your day. Manage tasks efficiently. Stay productive. Stay focused.</p>
                         </div>
 
                         <div class="relative z-10 flex-grow space-y-3 mb-8">
                             <div class="flex items-center gap-3 text-sm text-gray-300">
-                                <i class="fa-solid fa-check text-orange-500"></i> Next.js 14
+                                <i class="fa-solid fa-check text-orange-500"></i> PHP Laravel
                             </div>
                             <div class="flex items-center gap-3 text-sm text-gray-300">
-                                <i class="fa-solid fa-check text-orange-500"></i> Supabase Auth
+                                <i class="fa-solid fa-check text-orange-500"></i> MySQL
                             </div>
                             <div class="flex items-center gap-3 text-sm text-gray-300">
-                                <i class="fa-solid fa-check text-orange-500"></i> Tailwind CSS
+                                <i class="fa-solid fa-check text-orange-500"></i> focusflow.online
                             </div>
                         </div>
 
                         <button class="relative z-10 w-full py-3 rounded-xl border border-white/20 text-white font-semibold huly-btn">
-                            View Case Study
+                            View Project
                         </button>
                     </div>
                 </div>
@@ -576,7 +593,8 @@
             <h2 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">Ready to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Scale Up?</span></h2>
             <p class="text-xl text-muted mb-12">I'm currently available for freelance work and open to new opportunities.</p>
             
-            <a href="mailto:hello@prakashgiri.dev" class="inline-flex items-center gap-3 px-10 py-5 bg-white text-black text-xl rounded-full font-bold hover:scale-110 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.4)]">
+            <!-- Updated "Start a Project" Button with .btn-glow effect -->
+            <a href="mailto:hello@prakashgiri.dev" class="btn-glow px-10 py-5 text-xl rounded-full font-bold inline-flex items-center gap-3">
                 Start a Project
             </a>
 
