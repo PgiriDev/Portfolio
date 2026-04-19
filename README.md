@@ -1,14 +1,18 @@
 <div align="center">
 
-<img src="img/lo.png" width="120" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:10b981&height=130&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" />
+
+<br>
+
+<img src="https://raw.githubusercontent.com/PgiriDev/Portfolio/main/img/lo.png" width="110" />
 
 # 🚀 Prakash Giri
 
 ### Architecting the Digital Future
 
-<p>
-  <strong>Full Stack Developer • CSE Student • Laravel Specialist</strong>
-</p>
+**Full Stack Developer • CSE Student • Laravel Specialist**
+
+<br>
 
 <a href="https://pgiri.pages.dev">
   <img src="https://img.shields.io/badge/🌐_Live_Portfolio-Visit-10b981?style=for-the-badge" />
@@ -26,34 +30,48 @@
 
 ## ✨ About Me
 
-```diff
-+ CSE 3rd Year Student (Brainware University)
-+ Full Stack Developer (Laravel + PHP)
-+ Building real-world production apps
-+ Focused on UI/UX, performance & scalability
-🛠 Tech Stack
-<p align="center"> <img src="https://skillicons.dev/icons?i=html,css,tailwind,php,laravel,mysql,git,github,vite" /> </p>
-🚀 Featured Projects
-🔹 TrackFlow
+- 🎓 CSE 3rd Year Student (Brainware University)  
+- 💻 Full Stack Developer (Laravel + PHP)  
+- 🚀 Building real-world production applications  
+- 🎯 Focused on UI/UX, performance & scalability  
 
-💰 Modern finance platform with PWA, budgeting, analytics & security
-👉 https://trackflow.mooo.com
+---
 
-🔹 Alor Disha
+## 🛠 Tech Stack
 
-🏫 Student & teacher management system (real-world use)
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,tailwind,php,laravel,mysql,git,github,vite" />
+</p>
 
-🔹 FocusFlow
+---
 
-⚡ Productivity & task management web app
+## 🚀 Featured Projects
 
-📱 Portfolio Features
-⚡ Smooth animations & modern UI
-🌙 Dark premium interface
-📱 Fully responsive
-🎨 Clean UX with micro-interactions
-🚀 Fast performance
-📦 Run Locally
+### 🔹 TrackFlow  
+💰 Modern finance platform with PWA, budgeting & analytics  
+👉 https://trackflow.mooo.com  
+
+### 🔹 Alor Disha  
+🏫 Student & teacher management system (real-world use)  
+
+### 🔹 FocusFlow  
+⚡ Productivity & task management app  
+
+---
+
+## 📱 Portfolio Features
+
+- ⚡ Smooth animations & modern UI  
+- 🌙 Dark premium interface  
+- 📱 Fully responsive  
+- 🎨 Clean UX with micro-interactions  
+- 🚀 Fast performance  
+
+---
+
+## 📦 Run Locally
+
+```bash
 git clone https://github.com/PgiriDev/Portfolio.git
 cd Portfolio
 
@@ -62,8 +80,6 @@ Open index.html
 📬 Contact
 🌐 https://pgiri.pages.dev
 📧 pgiri.help@gmail.com
-<div align="center">
+
 
 ✨ Crafted with code by Prakash Giri
-
-</div>
