@@ -66,4 +66,4 @@ Open index.html
 
 ✨ Crafted with code by Prakash Giri
 
-</div> ```
+</div>
