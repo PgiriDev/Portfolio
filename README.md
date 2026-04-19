@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:10b981&height=130&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:10b981&height=110&section=header&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%" />
 
 <br>
 
-<img src="https://raw.githubusercontent.com/PgiriDev/Portfolio/main/img/lo.png" width="110" />
+<img src="https://raw.githubusercontent.com/PgiriDev/Portfolio/main/img/white.png" width="110" />
 
 # 🚀 Prakash Giri
 
